@@ -107,3 +107,11 @@ CREATE POLICY "Public update assets" ON assets FOR UPDATE USING (true);
 CREATE POLICY "Public read projects" ON projects FOR SELECT USING (true);
 CREATE POLICY "Public insert projects" ON projects FOR INSERT WITH CHECK (true);
 CREATE POLICY "Public update projects" ON projects FOR UPDATE USING (true);
+
+-- Explicitly GRANT table permissions to anon and authenticated roles
+-- (Required by PostgreSQL so PostgREST anon client can access tables protected by RLS)
+GRANT ALL ON TABLE properties TO anon, authenticated, service_role;
+GRANT ALL ON TABLE assets TO anon, authenticated, service_role;
+GRANT ALL ON TABLE projects TO anon, authenticated, service_role;
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO anon, authenticated, service_role;
+

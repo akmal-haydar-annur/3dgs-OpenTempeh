@@ -12,9 +12,11 @@
     "apply:migration": "node scripts/apply-migration.js"
   },
   "dependencies": {
+    "@playcanvas/supersplat-viewer": "^1.34.0",
     "@supabase/supabase-js": "^2.117.0",
     "lucide-react": "^1.47.0",
     "next": "16.3.6",
+    "playcanvas": "^2.22.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },

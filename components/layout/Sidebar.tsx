@@ -11,14 +11,20 @@ import {
   Settings,
   Cpu,
   Boxes,
+  Sparkles,
+  Globe,
+  MapPin,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+  { name: "Eksplorasi Kos", href: "/search", icon: MapPin },
   { name: "Properties", href: "/properties", icon: Building2 },
   { name: "Assets", href: "/assets", icon: FolderArchive },
   { name: "3D Projects", href: "/projects", icon: Layers },
+  { name: "3DGS Demo", href: "/3dgs-demo", icon: Sparkles },
+  { name: "Landing Page", href: "/landingpage", icon: Globe },
   { name: "Settings", href: "/settings", icon: Settings },
 ];
 

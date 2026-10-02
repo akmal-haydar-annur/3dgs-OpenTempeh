@@ -18,6 +18,63 @@
   --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+
+  --color-secondary-fixed: #ffdbd0;
+  --color-error-container: #ffdad6;
+  --color-primary-fixed-dim: #ffb599;
+  --color-on-surface-variant: #5a4138;
+  --color-inverse-primary: #ffb599;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-high: #e7e8eb;
+  --color-secondary-container: #fe6a34;
+  --color-on-background: #191c1e;
+  --color-on-primary-container: #fffbff;
+  --color-outline: #8e7166;
+  --color-surface-container-highest: #e1e2e5;
+  --color-surface-bright: #f8f9fc;
+  --color-on-secondary-fixed: #390c00;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary: #a33900;
+  --color-surface-container-low: #f2f4f6;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary-fixed: #25190f;
+  --color-surface-dim: #d8dadd;
+  --color-on-error: #ffffff;
+  --color-on-primary-fixed-variant: #7f2b00;
+  --color-on-error-container: #93000a;
+  --color-secondary: #ab3500;
+  --color-inverse-surface: #2e3133;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-fixed: #f5decd;
+  --color-surface-container: #eceef0;
+  --color-secondary-fixed-dim: #ffb59d;
+  --color-tertiary-fixed-dim: #d8c3b2;
+  --color-surface-tint: #a73a00;
+  --color-tertiary-container: #837163;
+  --color-primary-fixed: #ffdbce;
+  --color-inverse-on-surface: #eff1f3;
+  --color-surface: #f8f9fc;
+  --color-outline-variant: #e2bfb2;
+  --color-on-secondary-fixed-variant: #832600;
+  --color-on-surface: #191c1e;
+  --color-surface-variant: #e1e2e5;
+  --color-tertiary: #69594b;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary-container: #5d1900;
+  --color-on-tertiary-fixed-variant: #534437;
+  --color-primary-container: #cc4900;
+  --color-error: #ba1a1a;
+  --color-on-primary-fixed: #370e00;
+
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2.5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-xl: 3rem;
 }
 
 body {

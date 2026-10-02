@@ -1,0 +1,6 @@
+Title: Gaussian Splat VisCommerce with WAC Luminaires
+Author: Sarthak Gour (https://superspl.at/user/sarthakdesigner)
+Source: https://superspl.at/scene/8c7ac182
+License: CC Attribution (Creative Commons Attribution)
+License URL: http://creativecommons.org/licenses/by/4.0/
+Requirements: Author must be credited. Commercial use is allowed.
