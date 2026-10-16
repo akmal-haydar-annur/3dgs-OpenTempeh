@@ -1,55 +1,113 @@
-/* Editorial Font Classes & Variables */
+@import "../tokens.css";
+
+/* Editorial Font Classes & Variables mapped to Tokens */
 .font-headline {
-  font-family: 'Bebas Neue', 'Anton', Impact, -apple-system, sans-serif !important;
-  letter-spacing: 0.025em;
+  font-family: var(--font-family-headline) !important;
+  letter-spacing: var(--tracking-wide);
 }
 .font-condensed {
-  font-family: 'Oswald', -apple-system, sans-serif !important;
-  letter-spacing: 0.04em;
+  font-family: var(--font-family-condensed) !important;
+  letter-spacing: var(--tracking-wide);
 }
 .font-handwriting {
   font-family: 'Caveat', cursive !important;
 }
 .font-body {
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-family: var(--font-family-editorial) !important;
 }
 .font-mono-custom {
-  font-family: 'Space Mono', monospace !important;
+  font-family: var(--font-family-mono) !important;
 }
 .font-serif-custom {
   font-family: 'Playfair Display', Georgia, serif !important;
 }
 
+/* Modern Clean Sans for Hero Section */
+.font-display-modern {
+  font-family: var(--font-family-display) !important;
+}
+.font-body-modern {
+  font-family: var(--font-family-body) !important;
+}
+
+/* Organic Pebble Badge */
+.pebble-shape {
+  border-radius: 46% 54% 68% 32% / 38% 46% 54% 62%;
+}
+
+/* Animated Underline with Sweep Color Transition */
+.link-underline-animated {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: var(--color-stone-800) !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: color var(--duration-normal) var(--ease-standard);
+}
+.link-underline-animated::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-stone-300);
+  border-radius: var(--radius-full);
+  transition: background-color var(--duration-normal) ease;
+}
+.link-underline-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-brand-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-standard);
+  z-index: 1;
+}
+.link-underline-animated:hover {
+  color: var(--color-brand-primary) !important;
+}
+.link-underline-animated:hover::before {
+  background-color: var(--color-brand-primary) !important;
+}
+.link-underline-animated:hover::after {
+  width: 100% !important;
+}
+
 /* Global High-Contrast Text Selection Highlighting */
 ::selection {
-  background-color: #eb5722 !important;
+  background-color: var(--color-brand-primary) !important;
   color: #ffffff !important;
 }
 ::-moz-selection {
-  background-color: #eb5722 !important;
+  background-color: var(--color-brand-primary) !important;
   color: #ffffff !important;
 }
 
-/* Warm Paper & Maritime Palette */
-.bg-maritime-cream { background-color: #f7f4ed; }
-.bg-maritime-warmCard { background-color: #fcfbf8; }
-.border-maritime-border { border-color: #ded8cb; }
-.bg-maritime-dark { background-color: #171412; }
-.text-maritime-dark { color: #171412; }
-.bg-maritime-darker { background-color: #100d0b; }
-.bg-maritime-orange { background-color: #eb5722; }
-.text-maritime-orange { color: #eb5722; }
-.border-maritime-orange { border-color: #eb5722; }
-.hover\:bg-maritime-rust:hover { background-color: #d14614; }
-.border-maritime-rust { border-color: #d14614; }
-.text-maritime-rust { color: #d14614; }
-.text-maritime-teal { color: #1f6472; }
-.bg-maritime-teal { background-color: #1f6472; }
-.text-maritime-slate { color: #5f6770; }
+/* Warm Paper & Maritime Palette Mapped to Tokens */
+.bg-maritime-cream { background-color: var(--color-surface-muted); }
+.bg-maritime-warmCard { background-color: var(--color-surface-card); }
+.border-maritime-border { border-color: var(--color-stone-300); }
+.bg-maritime-dark { background-color: var(--color-surface-dark); }
+.text-maritime-dark { color: var(--color-surface-dark); }
+.bg-maritime-darker { background-color: var(--color-surface-dark); }
+.bg-maritime-orange { background-color: var(--color-brand-primary); }
+.text-maritime-orange { color: var(--color-brand-primary); }
+.border-maritime-orange { border-color: var(--color-brand-primary); }
+.hover\:bg-maritime-rust:hover { background-color: var(--color-brand-hover); }
+.border-maritime-rust { border-color: var(--color-brand-hover); }
+.text-maritime-rust { color: var(--color-brand-hover); }
+.text-maritime-teal { color: var(--color-maritime-teal); }
+.bg-maritime-teal { background-color: var(--color-maritime-teal); }
+.text-maritime-slate { color: var(--color-stone-500); }
 
 /* Subtle Paper Texture */
 .paper-texture {
-  background-color: #f7f4ed;
+  background-color: var(--color-surface-cream);
   background-image: 
     radial-gradient(rgba(40, 30, 20, 0.035) 1px, transparent 0);
   background-size: 20px 20px;
@@ -59,15 +117,15 @@
 .washi-tape {
   background: rgba(246, 238, 222, 0.88);
   backdrop-filter: blur(2px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Editorial Borders & Cards */
 .editorial-border {
-  border: 1px solid #ded8cb;
+  border: 1px solid var(--color-stone-200);
 }
 .editorial-border-dark {
-  border: 1px solid #2d2621;
+  border: 1px solid var(--color-stone-800);
 }
 
 /* Editorial Nav Link with Animated Sliding Underline */
@@ -75,11 +133,11 @@
   position: relative;
   display: inline-block;
   padding: 4px 0;
-  transition: color 0.2s ease;
-  letter-spacing: 0.01em;
+  transition: color var(--duration-normal) ease;
+  letter-spacing: var(--tracking-wide);
 }
 .nav-editorial-link:hover {
-  color: #eb5722;
+  color: var(--color-brand-primary);
 }
 .nav-editorial-link::after {
   content: '';
@@ -88,8 +146,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #eb5722;
-  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--color-brand-primary);
+  transition: width var(--duration-normal) var(--ease-standard);
 }
 .nav-editorial-link:hover::after {
   width: 100%;
@@ -100,7 +158,7 @@
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: marquee 120s linear infinite;
+  animation: marquee var(--duration-marquee) linear infinite;
 }
 .ticker-track:hover {
   animation-play-state: paused;
@@ -115,23 +173,27 @@
   }
 }
 
-/* Map Canvas Canvas Background */
+/* Modern Spatial Grid Background (Replacing Legacy Map Canvas) */
 .map-canvas-bg {
-  background-color: #f5f1e8;
+  background-color: var(--color-surface-cream);
   background-image: 
-    radial-gradient(#ded7ca 1.5px, transparent 1.5px),
-    linear-gradient(rgba(222, 215, 202, 0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(222, 215, 202, 0.45) 1px, transparent 1px);
-  background-size: 30px 30px, 30px 30px, 30px 30px;
+    radial-gradient(var(--color-stone-300) 1.2px, transparent 1.2px),
+    linear-gradient(rgba(231, 229, 228, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 229, 228, 0.6) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px, 32px 32px;
 }
 
-/* Custom Minimalist Scrollbar */
+/* Modern Clean Minimalist Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #ede7dd;
+  background: var(--color-stone-100);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #b8b0a2;
+  background: var(--color-stone-300);
+  border-radius: var(--radius-full);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone-400);
 }

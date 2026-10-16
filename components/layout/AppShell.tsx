@@ -10,7 +10,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const isPublicPage =
     pathname.startsWith("/landingpage") ||
     pathname.startsWith("/search") ||
-    pathname.startsWith("/kos");
+    pathname.startsWith("/kos") ||
+    pathname.startsWith("/labs/sandbox") ||
+    pathname.startsWith("/audit-visual");
 
   if (isPublicPage) {
     return <main className="min-h-screen">{children}</main>;
